@@ -9,7 +9,7 @@ st.set_page_config(layout="wide")
 
 @st.cache_data
 def carregar_tickers_acoes():
-    base_tickers = pd.read_csv("IBOV.CSV", sep=";")
+    base_tickers = pd.read_csv("IBOV.csv", sep=";")
     tickers = [item + ".SA" for item in base_tickers['Código']]
     return tickers
 
